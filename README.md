@@ -1,8 +1,41 @@
 # Laudo RRT - Sistema de Gestão de Laudos e Projetos
 
+## 📋 Links de Acesso
+
+- **Página Inicial**: [http://147.79.83.158:3008/](http://147.79.83.158:3008/)
+- **Login Administrativo**: [http://147.79.83.158:3008/login](http://147.79.83.158:3008/login)
+- **Solicitação de Laudos**: [http://147.79.83.158:3008/laudos](http://147.79.83.158:3008/laudos)
+
+### Credenciais de Acesso (Ambiente de Teste)
+```
+Email: admin@admin.com
+Senha: admin123
+```
+
 ## 📋 Sobre o Projeto
 
 O Laudo RRT é um sistema web completo para gestão de laudos técnicos, projetos e execuções de obras. A plataforma permite o gerenciamento de pedidos, clientes e documentação técnica, com suporte a diferentes tipos de atividades como projetos arquitetônicos, execuções de obras e serviços relacionados.
+
+## 🚀 Tabela de Preços
+
+- **Taxa CAU (RRT)**: R$ 115,18
+- **Laudo Técnico**: Entre R$ 147,00 e R$ 797,00 (dependendo da complexidade)
+- **Formas de Pagamento**: PIX ou Cartão de Crédito (até 3x sem juros)
+
+## ❓ Perguntas Frequentes
+
+### O que é RRT?
+O RRT (Registro de Responsabilidade Técnica) é o documento equivalente à ART, específico para serviços de arquitetura. Ele garante a conformidade com a NBR 16280 e registra oficialmente a responsabilidade técnica do arquiteto pelo projeto ou execução.
+
+### Qual a validade dos documentos?
+Tanto a ART quanto a RRT são documentos vitalícios, não possuindo data de validade. Durante sua emissão, são especificadas as datas de início e conclusão das atividades previstas.
+
+### O que inclui o Laudo Técnico?
+- Descrição completa dos serviços
+- Plantas com alterações propostas
+- Especificações técnicas
+- Orientações para execução
+- Garantia de segurança e qualidade
 
 ## 🚀 Tecnologias Utilizadas
 
