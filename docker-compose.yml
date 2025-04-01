@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    container_name: laudorrt-postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Be111290@#
+      POSTGRES_DB: laudorrt
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - laudorrt-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: laudorrt-frontend
+    ports:
+      - "3008:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://147.79.83.158:3009
+    depends_on:
+      - backend
+    restart: always
+    networks:
+      - laudorrt-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: laudorrt-backend
+    ports:
+      - "3009:3000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:Be111290@#@postgres:5432/laudorrt
+      - JWT_SECRET=laudorrt_secret_key_2025
+      - NODE_ENV=production
+      - PORT=3000
+    depends_on:
+      - postgres
+    restart: always
+    networks:
+      - laudorrt-network
+
+networks:
+  laudorrt-network:
+    driver: bridge
+
+volumes:
+  postgres_data: 

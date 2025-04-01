@@ -1,0 +1,5 @@
+1|cd frontend
+2|rmdir /s /q .next
+3|rmdir /s /q node_modules
+4|npm install
+5|npm run dev 

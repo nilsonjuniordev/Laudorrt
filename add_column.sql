@@ -1,0 +1,1 @@
+ALTER TABLE historico_status ADD COLUMN IF NOT EXISTS usuario_nome VARCHAR(255) NOT NULL DEFAULT 'Administrador'; 
